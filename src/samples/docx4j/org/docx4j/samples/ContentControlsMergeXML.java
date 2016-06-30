@@ -53,8 +53,9 @@ public class ContentControlsMergeXML {
 		// the docx 'template'
 		String input_DOCX = System.getProperty("user.dir") + "/sample-docs/word/databinding/binding-simple.docx";
 		
-		// the instance data
-		String input_XML = System.getProperty("user.dir") + "/sample-docs/word/databinding/binding-simple-data.xml";
+		// the instance data	document
+		//String input_XML = System.getProperty("user.dir") + "/sample-docs/word/databinding/binding-simple-data.xml";
+		String input_XML = System.getProperty("user.dir") + "/sample-docs/word/databinding/document.xml";
 		
 		// resulting docx
 		String OUTPUT_DOCX = System.getProperty("user.dir") + "/OUT_ContentControlsMergeXML.docx";

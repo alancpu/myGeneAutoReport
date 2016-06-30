@@ -32,12 +32,13 @@ import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
  */
 public class MergeDocx extends AbstractSample {
 
-	final static String BASE_DIR = System.getProperty("user.dir") + "/sample-docs/word/";
+	//final static String BASE_DIR = System.getProperty("user.dir") + "/sample-docs/word/";
+	final static String BASE_DIR = System.getProperty("user.dir") + "/zhou_merge_sample_doc/";
 
-	final static String[] sourceDocxNames = { "tables.docx", "Images.docx"};  
+	final static String[] sourceDocxNames = { "Test001.docx", "Test002.docx","Test003.docx"};  
 
 	static boolean save = true;
-	static String outputfilepath = System.getProperty("user.dir") +"OUT_MergeDocx.docx";		
+	static String outputfilepath = System.getProperty("user.dir") +"/OUT_MergeDocx.docx";		
 	
 	/**
 	 * @param args

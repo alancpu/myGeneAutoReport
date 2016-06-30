@@ -38,7 +38,9 @@ import org.docx4j.wml.CTFtnDocProps;
 import org.docx4j.wml.CTFtnEdn;
 import org.docx4j.wml.CTFtnEdnRef;
 import org.docx4j.wml.CTSettings;
+import org.docx4j.wml.P;
 import org.docx4j.wml.R;
+import org.docx4j.zhou.AddPageBreakZhou;
 
 /**
  * How to add a footnote 
@@ -54,9 +56,11 @@ public class FootnoteAdd  {
 		WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.createPackage();
 		MainDocumentPart mdp = wordMLPackage.getMainDocumentPart();
 		
+		
 		// Setup FootnotesPart if necessary,
 		// along with DocumentSettings
 		FootnotesPart footnotesPart = mdp.getFootnotesPart();
+		
 		if (footnotesPart==null) { // that'll be the case in this example
 			// initialise it
 			footnotesPart = new FootnotesPart();
@@ -91,6 +95,7 @@ public class FootnoteAdd  {
 			}
 		}
 		
+		
 		// Example
 		// Create and add p
 		org.docx4j.wml.ObjectFactory factory = Context.getWmlObjectFactory();
@@ -106,7 +111,16 @@ public class FootnoteAdd  {
 		r.getContent().add(t);
 		
 		// OK, add a footnote
-		addFootnote(1, "my footnote", footnotesPart, r);  
+		addFootnote(1, "my footnote", footnotesPart, r); 
+		
+		AddPageBreakZhou pb = new AddPageBreakZhou();
+		P adb = pb.addPageBreak(factory);
+		mdp.addObject(adb);
+		
+		t.setValue("Hello world");
+		r.getContent().add(t);
+		addFootnote(2, "my footnote", footnotesPart, r); 
+		
 			// Note: your footnote ids must be distinct; they don't need to be ordered (though Word will do that when you open the docx)
 		
 		// Save it

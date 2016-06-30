@@ -13,7 +13,9 @@ import org.docx4j.openpackaging.parts.relationships.RelationshipsPart.AddPartBeh
 import org.docx4j.relationships.Relationship;
 import org.docx4j.wml.Hdr;
 import org.docx4j.wml.ObjectFactory;
+import org.docx4j.wml.P;
 import org.docx4j.wml.SectPr;
+import org.docx4j.zhou.AddPageBreakZhou;
 
 /**
  * 
@@ -61,6 +63,10 @@ public class WatermarkPicture
     	wordMLPackage.getMainDocumentPart().getContents().getBody().setSectPr(
     			createSectPr() );
 
+		AddPageBreakZhou pb = new AddPageBreakZhou();
+		P adb = pb.addPageBreak(factory);
+		wordMLPackage.getMainDocumentPart().addObject(adb);
+    	
         File f = new File(DOCX_OUT);
         wordMLPackage.save(f);
 

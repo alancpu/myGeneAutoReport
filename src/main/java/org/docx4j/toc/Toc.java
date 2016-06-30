@@ -53,7 +53,8 @@ public class Toc {
     private static final String DEFAULT_TOC_INSTRUCTION = "TOC \\o \"1-3\" \\h \\z \\u ";
     //private static final String TOC_HEADING_STYLE = "TOCHeading";
     
-    private static String DEFAULT_TOC_HEADING = "Contents";
+    //private static String DEFAULT_TOC_HEADING = "Contents";
+    private static String DEFAULT_TOC_HEADING = "报告目录";
     
     /**
      * Use the provided text for the ToC heading.

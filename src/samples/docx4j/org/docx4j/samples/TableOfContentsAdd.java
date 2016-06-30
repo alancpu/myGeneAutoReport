@@ -40,6 +40,7 @@ public class TableOfContentsAdd {
 		WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.createPackage();
 		MainDocumentPart documentPart = wordMLPackage.getMainDocumentPart();
 		
+		@SuppressWarnings("deprecation")
 		org.docx4j.wml.Document wmlDocumentEl = (org.docx4j.wml.Document)documentPart.getJaxbElement();
 		Body body =  wmlDocumentEl.getBody();
 		
@@ -69,7 +70,8 @@ public class TableOfContentsAdd {
         R r1 = factory.createR();
         Text txt = new Text();
         txt.setSpace("preserve");
-        txt.setValue("TOC \\o \"1-3\" \\h \\z \\u \\h");
+        //txt.setValue("TOC \\o \"1-3\" \\h \\z \\u \\h");
+        txt.setValue("TOC \\o \"1-1\" \\h \\z \\u \\h");
         r.getContent().add(factory.createRInstrText(txt) );
         paragraphForTOC.getContent().add(r1);
 
@@ -86,7 +88,7 @@ public class TableOfContentsAdd {
 		documentPart.addStyledParagraphOfText("Heading3", "Hello 3");
 		documentPart.addStyledParagraphOfText("Heading1", "Hello 1");
 					
-		wordMLPackage.save(new java.io.File(System.getProperty("user.dir") + "/OUT_TableOfContentsAdd.docx") );
+		wordMLPackage.save(new java.io.File(System.getProperty("user.dir") + "/OUT_TableOfContentsAdd02.docx") );
 		
 	}
 	

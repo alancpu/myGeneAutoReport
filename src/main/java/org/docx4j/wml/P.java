@@ -35,6 +35,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import org.docx4j.dml.diagram.STDirection;
 import org.docx4j.math.CTOMath;
 import org.docx4j.math.CTOMathPara;
 import org.jvnet.jaxb2_commons.ppp.Child;

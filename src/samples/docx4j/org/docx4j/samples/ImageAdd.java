@@ -90,7 +90,7 @@ public class ImageAdd {
 		
 		
 		// Now save it 
-		wordMLPackage.save(new java.io.File(System.getProperty("user.dir") + "/OUT_AddImage.docx") );
+		wordMLPackage.save(new java.io.File(System.getProperty("user.dir") + "/OUT_AddImage01.docx") );
 		
 	}
 

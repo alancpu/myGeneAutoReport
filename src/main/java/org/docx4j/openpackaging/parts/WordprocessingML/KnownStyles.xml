@@ -178,7 +178,8 @@
 			<w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorEastAsia" w:hAnsiTheme="majorHAnsi" w:cstheme="majorBidi" />
 			<w:b />
 			<w:bCs />
-			<w:color w:val="365F91" w:themeColor="accent1" w:themeShade="BF" />
+			<!--<w:color w:val="365F91" w:themeColor="accent1" w:themeShade="BF" />-->
+			<w:color w:val="000000" w:themeColor="accent1" w:themeShade="BF" />
 			<w:sz w:val="28" />
 			<w:szCs w:val="28" />
 		</w:rPr>

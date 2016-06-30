@@ -1,3 +1,4 @@
+
 package org.docx4j.samples;
 
 import java.io.File;
@@ -68,6 +69,8 @@ public class BackgroundImage {
 
     	wordMLPackage.getMainDocumentPart().addParagraphOfText("To see your background, go to 'Web layout' or 'Full screen reading' document view!");
     	
+    	
+    	
         File f = new File(DOCX_OUT);
         wordMLPackage.save(f);
 
@@ -86,7 +89,8 @@ public class BackgroundImage {
 		JAXBElement<org.docx4j.vml.CTBackground> backgroundWrapped = vmlObjectFactory
 				.createBackground(background2);
 		background.getAnyAndAny().add(backgroundWrapped);
-		background2.setTargetscreensize("1024,768");
+		//background2.setTargetscreensize("1024,768");
+		background2.setTargetscreensize("768,1024");
 		background2.setVmlId("_x0000_s1025");
 		background2.setBwmode(org.docx4j.vml.officedrawing.STBWMode.WHITE);
 		// Create object for fill
